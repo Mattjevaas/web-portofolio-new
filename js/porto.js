@@ -14,7 +14,6 @@ const THEME_KEY = "theme_key";
 
 themeToggle.addEventListener('click', () => {
     let currTheme = localStorage.getItem(THEME_KEY);
-    console.log(currTheme);
 
     if(currTheme == themeState.DARK) {
         changeThemeToLight();
@@ -30,8 +29,10 @@ function initTheme() {
 
     if(currTheme == themeState.LIGHT) {
         changeThemeToLight();
+        localStorage.setItem(THEME_KEY, themeState.LIGHT);
     } else {
         changeThemeToDark();
+        localStorage.setItem(THEME_KEY, themeState.DARK);
     }
 }
 
