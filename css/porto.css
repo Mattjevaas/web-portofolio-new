@@ -61,6 +61,16 @@ body {
     transition: all 0.2s ease-in-out;
 }
 
+.neumorphism-disabled {
+    border-radius: 1rem;
+    background: var(--bg-color);
+    /* Use an inset shadow to make it look pressed or inactive */
+    box-shadow: inset 3px 3px 6px var(--neumorphism-dark-shadow),
+                inset -3px -3px 6px var(--neumorphism-light-shadow);
+    opacity: 0.6; /* Lower opacity to fade it out */
+    cursor: not-allowed;
+}
+
 .neumorphism-interactive:hover {
     box-shadow: 4px 4px 8px var(--neumorphism-dark-shadow),
                 -4px -4px 8px var(--neumorphism-light-shadow);
