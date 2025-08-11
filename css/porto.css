@@ -1,0 +1,113 @@
+/* * NEUMORPHISM STYLE DEFINITIONS
+* This is the core of the design. We define custom classes for the
+* extruded (outset) and pressed (inset) effects.
+*/
+:root {
+    --bg-color: #e0e0e0;
+    --main-font: 'Poppins', sans-serif;
+    --text-color: #5a5a5a;
+    --neumorphism-light-shadow: rgba(255, 255, 255, 0.7);
+    --neumorphism-dark-shadow: rgba(0, 0, 0, 0.15);
+    --modal-overlay-bg: rgba(50, 50, 50, 0.5);
+}
+
+/* Dark mode color variables */
+.dark {
+    --bg-color: #2c2c2c;
+    --text-color: #c7c7c7;
+    --neumorphism-light-shadow: rgba(255, 255, 255, 0.1);
+    --neumorphism-dark-shadow: rgba(0, 0, 0, 0.4);
+    --modal-overlay-bg: rgba(0, 0, 0, 0.6);
+}
+
+body {
+    font-family: var(--main-font);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Main extruded (outset) style for containers and cards */
+.neumorphism-outset {
+    border-radius: 2rem;
+    background: var(--bg-color);
+    box-shadow: 8px 8px 16px var(--neumorphism-dark-shadow),
+                -8px -8px 16px var(--neumorphism-light-shadow);
+    transition: all 0.3s ease;
+}
+
+.neumorphism-outset-no-light {
+    border-radius: 2rem;
+    background: var(--bg-color);
+    box-shadow: 8px 8px 16px var(--neumorphism-dark-shadow);
+    transition: all 0.3s ease;
+}
+
+/* Inset style for "pressed" elements like input fields or active buttons */
+.neumorphism-inset {
+    border-radius: 1rem;
+    background: var(--bg-color);
+    box-shadow: inset 5px 5px 10px var(--neumorphism-dark-shadow),
+                inset -5px -5px 10px var(--neumorphism-light-shadow);
+    transition: all 0.3s ease;
+}
+
+/* Style for buttons and icons that get pressed on hover/active */
+.neumorphism-interactive {
+    border-radius: 1rem;
+    background: var(--bg-color);
+    box-shadow: 6px 6px 12px var(--neumorphism-dark-shadow),
+                -6px -6px 12px var(--neumorphism-light-shadow);
+    transition: all 0.2s ease-in-out;
+}
+
+.neumorphism-interactive:hover {
+    box-shadow: 4px 4px 8px var(--neumorphism-dark-shadow),
+                -4px -4px 8px var(--neumorphism-light-shadow);
+}
+
+.neumorphism-interactive:active, .neumorphism-interactive.active {
+    box-shadow: inset 4px 4px 8px var(--neumorphism-dark-shadow),
+                inset -4px -4px 8px var(--neumorphism-light-shadow);
+}
+
+/* Custom scrollbar for a cohesive look */
+::-webkit-scrollbar {
+    width: 8px;
+}
+::-webkit-scrollbar-track {
+    background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+    background: #b3b3b3;
+    border-radius: 4px;
+}
+.dark ::-webkit-scrollbar-thumb {
+    background: #555;
+}
+
+/* Animation for elements on scroll */
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Zoom animation for project card images */
+.project-card .project-image {
+    transition: transform 0.5s ease-in-out;
+}
+.project-card:hover .project-image {
+    transform: scale(1.05);
+}
+
+/* Modal styles */
+#modal-overlay {
+    background-color: var(--modal-overlay-bg);
+    transition: background-color 0.3s ease;
+}

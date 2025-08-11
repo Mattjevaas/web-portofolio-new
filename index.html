@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JWS - Portfolio</title>
+    
+    <!-- Tailwind CSS for rapid styling -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" xintegrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="./css/porto.css">
+</head>
+<body class="min-h-screen w-full flex items-center justify-center p-4 sm:p-6 lg:p-8">
+
+    <!-- Main Portfolio Container -->
+    <main class="neumorphism-outset w-full max-w-4xl p-6 sm:p-8 md:p-12">
+        
+        <!-- Header Section -->
+        <header class="flex flex-col sm:flex-row items-center text-center sm:text-left">
+            <!-- Profile Picture -->
+            <div class="relative w-32 h-32 sm:w-40 sm:h-40 mb-6 sm:mb-0 sm:mr-8 flex-shrink-0">
+                <div class="w-full h-full neumorphism-outset rounded-full p-2">
+                    <img id="avatar-image"
+                         src="./assets/avatar-light.webp" 
+                         alt="Profile Picture of John Doe" 
+                         class="w-full h-full rounded-full object-cover neumorphism-inset p-1">
+                </div>
+            </div>
+            
+            <!-- Name and Title -->
+            <div class="flex-grow">
+                <h1 class="text-3xl sm:text-4xl font-bold">Johanes Wiku S.</h1>
+                <p class="text-lg sm:text-xl mt-1 font-light">Software Engineer & IT Enthusiast</p>
+                
+                <!-- Social Links -->
+                <div class="flex justify-center sm:justify-start space-x-4 mt-4">
+                    <a href="https://github.com/Mattjevaas" target="_blank" rel="noopener noreferrer" class="neumorphism-interactive w-12 h-12 flex items-center justify-center text-xl"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/johanes-wiku-sakti-9113a41b4/" target="_blank" rel="noopener noreferrer" class="neumorphism-interactive w-12 h-12 flex items-center justify-center text-xl"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" target="_blank" rel="noopener noreferrer" class="neumorphism-interactive w-12 h-12 flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+
+            <!-- Theme Toggle Button -->
+            <button id="theme-toggle" class="neumorphism-interactive w-12 h-12 flex items-center justify-center text-xl absolute top-6 right-6">
+                <i id="theme-icon" class="fas fa-moon"></i>
+            </button>
+        </header>
+
+        <!-- About Me Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-4">About Me</h2>
+            <div class="neumorphism-inset p-6 text-base font-light leading-relaxed">
+                <p>Hello, I’m Johanes <b>Wiku</b> Sakti — a passionate software engineer specializing in mobile and backend development. As an IT enthusiast, I have a deep interest in various fields of technology, including software development, system design and architecture, programming, and cybersecurity.
+                    <br>
+                    <br>
+                    I am always eager to learn new things, driven by a spirit of innovation, and highly adaptable to technological advancements. I enjoy collaborating with teams and connecting with inspiring individuals from diverse backgrounds to create impactful solutions.</p>
+            </div>
+        </section>
+
+        <!-- Tech Stack Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6 text-center">My Tech Stack</h2>
+            <div class="flex flex-wrap justify-center items-center gap-6">
+                <div class="neumorphism-interactive w-20 h-20 flex items-center justify-center p-4" title="Go">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/go/go-original-wordmark.svg" alt="Go Logo" class="max-w-full max-h-full">
+                </div>
+                <div class="neumorphism-interactive w-20 h-20 flex items-center justify-center p-4" title="Java">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original-wordmark.svg" alt="Java Logo" class="max-w-full max-h-full">
+                </div>
+                <div class="neumorphism-interactive w-20 h-20 flex items-center justify-center p-4" title="Spring Boot">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original-wordmark.svg" alt="Spring Boot Logo" class="max-w-full max-h-full">
+                </div>
+                <div class="neumorphism-interactive w-20 h-20 flex items-center justify-center p-4" title="Flutter">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/flutter/flutter-original.svg" alt="Flutter Logo" class="max-w-full max-h-full">
+                </div>
+                <div class="neumorphism-interactive w-20 h-20 flex items-center justify-center p-4" title="React">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original-wordmark.svg" alt="React Logo" class="max-w-full max-h-full">
+                </div>
+                <div class="neumorphism-interactive w-20 h-20 flex items-center justify-center p-4" title="Docker">
+                    <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original-wordmark.svg" alt="Docker Logo" class="max-w-full max-h-full">
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6">My Projects</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Project Card 1 -->
+                <div class="neumorphism-outset p-6 flex flex-col animate-on-scroll project-card">
+                    <!-- Project Image -->
+                    <div class="neumorphism-inset rounded-xl mb-4 overflow-hidden">
+                        <img src="./assets/spillr.webp" alt="Project Spillr Preview" class="w-full h-40 object-cover project-image">
+                    </div>
+                    <!-- Project Content -->
+                    <h3 class="text-xl font-semibold mb-2">Spillr App</h3>
+                    <p class="text-sm mb-4 flex-grow">
+                        Creating dApps that serve as an anonymous discussion forum where 
+                        anyone can freely create posts and provide responses to posts. 
+                        It emphasizes maintaining identity confidentiality, and the entire 
+                        application operates on the ICP blockchain ecosystem. Built using
+                        Motoko and React Js. Got 2nd 🥈 on ICP Indonesia Hackathon 12.
+                    </p>
+                    <a href="https://github.com/Mattjevaas/Spillr-App" target="_blank" rel="noopener noreferrer" class="neumorphism-interactive text-center py-3 px-4 font-medium mt-auto">View Project</a>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="neumorphism-outset p-6 flex flex-col animate-on-scroll project-card">
+                    <!-- Project Image -->
+                    <div class="neumorphism-inset rounded-xl mb-4 overflow-hidden">
+                        <img src="./assets/url-short.webp" alt="Project Beta Preview" class="w-full h-40 object-cover project-image">
+                    </div>
+                    <!-- Project Content -->
+                    <h3 class="text-xl font-semibold mb-2">URL Shortener</h3>
+                    <p class="text-sm mb-4 flex-grow">
+                        A simple custom URL shortener designed to convert long URLs into compact, easy-to-share links. 
+                        Each generated URL comes with an expiration period, ensuring that the links remain valid and trustworthy. 
+                        Built with Go and Svelte, it leverages Redis for efficient in-memory data storage.
+                    </p>
+                    <a href="https://johaneswiku.com/urlshort/" target="_blank" rel="noopener noreferrer" class="neumorphism-interactive text-center py-3 px-4 font-medium mt-auto">View Project</a>
+                </div>
+                 <!-- Project Card 3 -->
+                <!-- <div class="neumorphism-outset p-6 flex flex-col animate-on-scroll project-card"> -->
+                    <!-- Project Image -->
+                    <!-- <div class="neumorphism-inset rounded-xl mb-4 overflow-hidden">
+                        <img src="https://placehold.co/600x400/e0e0e0/5a5a5a?text=Project+Beta" alt="Project Beta Preview" class="w-full h-40 object-cover project-image">
+                    </div> -->
+                    <!-- Project Content -->
+                    <!-- <h3 class="text-xl font-semibold mb-2">Project Beta</h3>
+                    <p class="text-sm mb-4 flex-grow">A data visualization dashboard for tracking personal finance, built with D3.js and React.</p>
+                    <a href="#" class="neumorphism-interactive text-center py-3 px-4 font-medium mt-auto">View Project</a> -->
+                <!-- </div> -->
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="mt-12">
+            <h2 class="text-2xl font-semibold mb-6">Get In Touch</h2>
+            <form id="contact-form" class="space-y-6">
+                <input type="text" placeholder="Your Name" class="w-full p-4 neumorphism-inset focus:outline-none bg-transparent">
+                <input type="email" placeholder="Your Email" class="w-full p-4 neumorphism-inset focus:outline-none bg-transparent">
+                <textarea placeholder="Your Message" rows="5" class="w-full p-4 neumorphism-inset focus:outline-none bg-transparent resize-none"></textarea>
+                <button type="submit" class="w-full neumorphism-interactive py-4 font-semibold text-lg">Send Message</button>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- Under Construction Modal -->
+    <div id="modal-overlay" class="fixed inset-0 flex items-center justify-center p-4 hidden z-50">
+        <div class="neumorphism-outset-no-light p-8 rounded-2xl max-w-sm w-full text-center relative animate-on-scroll">
+            <button id="close-modal" class="absolute top-4 right-4 neumorphism-interactive w-10 h-10 flex items-center justify-center text-lg font-bold">&times;</button>
+            
+            <!-- Icon -->
+            <div class="neumorphism-inset w-24 h-24 rounded-full mx-auto mb-6 flex items-center justify-center">
+                <i class="fas fa-person-digging text-4xl"></i>
+            </div>
+            
+            <h3 class="text-2xl font-bold mb-4">Under Construction</h3>
+            <p class="text-base font-light">This feature is coming soon. Thank you for your patience!</p>
+        </div>
+    </div>
+
+    <script src="./js/porto.js"></script>
+</body>
+</html>
